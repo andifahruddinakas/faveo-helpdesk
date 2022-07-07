@@ -4,7 +4,6 @@
 .DS_Store
 Homestead.yaml
 Homestead.json
-composer.lock
 /config/lfm.php
 /nbproject/*
 /node_modules
@@ -13,6 +12,5 @@ composer.lock
 /public/uploads
 /public/photos/
 /app/FaveoJob
-/vendor/
 /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
 /storage/app/attachments
