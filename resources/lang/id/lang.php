@@ -1353,7 +1353,7 @@ return [
       | sesuaikan tampilan Anda agar lebih cocok dengan aplikasi Anda.
       |
      */
-    'home'                                                                              => 'Rumah',
+    'home'                                                                              => 'Beranda',
     'submit_a_ticket'                                                                   => 'Kirim Tiket',
     'my_profile'                                                                        => 'Profil Saya',
     'log_out'                                                                           => 'Keluar',
