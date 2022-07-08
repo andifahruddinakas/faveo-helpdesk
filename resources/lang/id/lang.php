@@ -319,8 +319,8 @@ return [
       | Halaman Pengaturan Email
       |--------------------------------------------------
      */
-    'email'                                => 'Email',
-    'email-settings'                       => 'Pengaturan email',
+    'emails'                                => 'Email',
+    'email-settings'                       => 'Pengaturan Email',
     'default_template'                     => 'Set template default:',
     'default_system_email'                 => 'Email sistem default:',
     'default_alert_email'                  => 'Email peringatan default:',
@@ -340,7 +340,7 @@ return [
     'email_attahment_user'                 => 'Lampiran email ke pengguna',
     'cron_notification'                    => 'Aktifkan notifikasi cron',
     'cron'                                 => 'Penjadwal tugas',
-    'cron-jobs'                            => 'Cron job',
+    'cron-jobs'                            => 'Cron Job',
     'crone-url-message'                    => " Ini adalah URL penjadwal pekerjaan (cron job) Faveo untuk sistem Anda. ",
     'clipboard-copy-message'               => 'Disalin ke clipboard.',
     'click'                                => 'Klik di sini',
@@ -354,7 +354,7 @@ return [
       | Halaman Pengaturan Tiket
       |--------------------------------------------------
      */
-    'ticket'                               => 'tiket',
+    'ticket'                               => 'Tiket',
     'ticket-setting'                       => 'Setelan tiket',
     'default_ticket_number_format'         => 'Format nomor tiket default',
     'default_ticket_number_sequence'       => 'Urutan nomor tiket default',
@@ -395,9 +395,9 @@ return [
     'registration_method'                               => 'Metode pendaftaran',
     'user_session_timeout'                              => 'Waktu sesi pengguna habis',
     'client_quick_access'                               => 'Akses cepat klien',
-    'cron'                                              => 'cron',
-    'cron_settings'                                     => 'Pengaturan cron',
-    'system-settings'                                   => 'Pengaturan sistem',
+    'cron'                                              => 'Cron',
+    'cron_settings'                                     => 'Pengaturan Cron',
+    'system-settings'                                   => 'Pengaturan Sistem',
     'settings-2'                                        => 'Pengaturan',
     /*
       |--------------------------------------------------
@@ -425,8 +425,8 @@ return [
      */
     'disable'                                                => 'Nonaktifkan',
     'admin_email_2'                                          => 'Admin email',
-    'alert_notices'                                          => 'Peringatan dan pemberitahuan',
-    'alert_notices_setitngs'                                 => 'Pengaturan peringatan dan pemberitahuan',
+    'alert_notices'                                          => 'Peringatan & Pemberitahuan',
+    'alert_notices_setitngs'                                 => 'Pengaturan Peringatan & Pemberitahuan',
     'new_ticket_alert'                                       => 'Peringatan tiket baru',
     'department_manager'                                     => 'Manajer departemen',
     'department_members'                                     => 'Anggota departemen',
@@ -603,17 +603,17 @@ return [
       | Alur Kerja
       |--------------------------------------------------
      */
-    'workflow'                       => 'Alur kerja',
-    'ticket_workflow'                => 'Alur kerja tiket',
-    'create_workflow'                => 'Buat alur kerja',
-    'edit_workflow'                  => 'Edit alur kerja',
+    'workflow'                       => 'Alur Kerja',
+    'ticket_workflow'                => 'Alur Kerja Tiket',
+    'create_workflow'                => 'Buat Alur Kerja',
+    'edit_workflow'                  => 'Edit Alur Kerja',
     'updated'                        => 'Diperbarui',
     'target'                         => 'Target',
-    'target_channel'                 => 'Saluran sasaran',
-    'execution_order'                => 'Perintah eksekusi',
-    'target_channel'                 => 'Saluran sasaran',
-    'workflow_rules'                 => 'Aturan alur kerja',
-    'workflow_action'                => 'Alur kerja tindakan',
+    'target_channel'                 => 'Saluran Sasaran',
+    'execution_order'                => 'Perintah Eksekusi',
+    'target_channel'                 => 'Saluran Sasaran',
+    'workflow_rules'                 => 'Aturan Alur Kerja',
+    'workflow_action'                => 'Alur Kerja Tindakan',
     'rules'                          => 'Aturan',
     'order'                          => 'Pesan',
     'condition'                      => 'Kondisi',
@@ -636,9 +636,9 @@ return [
     'assign_agent'                   => 'Tugaskan agen',
     'set_help_topic'                 => 'Setel topik bantuan',
     'set_ticket_status'              => 'Setel status tiket',
-    'workflow_created_successfully' => 'Alur kerja berhasil dibuat',
-    'workflow_updated_successfully' => 'Alur kerja berhasil diperbarui',
-    'workflow_deleted_successfully' => 'Alur kerja berhasil dihapus',
+    'workflow_created_successfully'  => 'Alur Kerja Berhasil Dibuat',
+    'workflow_updated_successfully'  => 'Alur Kerja Berhasil Diperbarui',
+    'workflow_deleted_successfully'  => 'Alur Kerja Berhasil Dihapus',
 
     /*
       |--------------------------------------------------
@@ -651,7 +651,7 @@ return [
     'visibility'                             => 'Visibilitas',
     'variable'                               => 'Variabel',
     'create_form'                            => 'Buat formulir',
-    'form'                                  => 'Formulir',
+    'forms'                                   => 'Formulir',
     'form_name'                              => 'Nama formulir',
     'view_this_form'                         => 'Lihat formulir ini',
     'delete_from'                            => 'Hapus formulir',
@@ -744,7 +744,7 @@ return [
     'name'                => 'Nama',
     'user_name'           => 'Nama pengguna',
     'status'              => 'Status',
-    'grup'               => 'Grup',
+    'group'               => 'Grup',
     'department'          => 'Departemen',
     'created'             => 'Dibuat',
     'lastlogin'           => 'Login terakhir',
@@ -754,7 +754,7 @@ return [
     'create'              => 'Buat',
     'edit'                => 'Edit',
     'departments'         => 'Departemen',
-    'grup'              => 'Grup',
+    'groups'              => 'Grup',
     'time_zones'          => 'Zona waktu',
     /*
       |--------------------------------------------------
@@ -1201,11 +1201,11 @@ return [
     'show'                       => 'Tampilkan',
     'no_notification_available' => 'Tidak ada pemberitahuan',
 
-    //alur kerja tutup otomatis
+    //Alur Kerja tutup otomatis
     'close-msg1'                                           => 'Jumlah hari setelah tiket akan ditutup otomatis.',
     'no_of_days'                                           => 'Jumlah hari',
-    'close-msg2'                                           => 'Aktifkan alur kerja tutup otomatis?',
-    'enable_workflow'                                      => 'Aktifkan alur kerja',
+    'close-msg2'                                           => 'Aktifkan Alur Kerja tutup otomatis?',
+    'enable_workflow'                                      => 'Aktifkan Alur Kerja',
     'send_email_to_user'                                   => 'Kirim email ke pengguna',
     'close-msg3'                                           => 'Pilih status yang akan dipilih saat menutup tiket.',
     'close-msg4'                                           => 'Kirim email ke pengguna saat menutup tiket secara otomatis?',
@@ -1213,7 +1213,7 @@ return [
     'list_of_status'                                       => 'Daftar status',
     'status_settings'                                      => 'Pengaturan status',
     'icon_class'                                           => 'Ikon kelas',
-    'close_ticket_workflow'                                => 'Tutup alur kerja tiket',
+    'close_ticket_workflow'                                => 'Tutup Alur Kerja Tiket',
     'ratings_settings'                                     => 'Pengaturan peringkat',
     'notification'                                         => 'Pemberitahuan',
     'status_has_been_updated_successfully'                 => 'Status telah berhasil diperbarui',
@@ -1222,7 +1222,7 @@ return [
     'you_cannot_delete_this_status'                        => 'Anda tidak dapat menghapus status ini',
     'you_have_deleted_all_the_read_notifications'          => 'Anda telah menghapus semua notifikasi yang telah dibaca',
     'you_have_deleted_all_the_notification_records_since' => 'Anda telah menghapus semua catatan pemberitahuan sejak ',
-    'ratings_updated_successfully'                         => 'Peringkat berhasil diperbarui',
+    'ratings_updated_successfully'                         => 'Peringkat Berhasil Diperbarui',
     'ratings_can_not_be_created'                           => 'Peringkat tidak dapat dibuat',
     'successfully_created_this_rating'                     => 'Berhasil membuat peringkat ini',
     'rating_deleted_successfully'                          => 'Rating berhasil dihapus',
@@ -1244,13 +1244,13 @@ return [
     'max_attempt'                            => 'Upaya login maksimal per host/pengguna',
     'rating-msg1'                            => 'Nilai maksimum yang dapat diberikan. Misalnya, jika 5 dipilih, peringkat terendah yang mungkin adalah 1 dan tertinggi 5.',
     'enter_no_of_days'                       => 'Masukkan jumlah hari',
-    'template-types'                         => 'Tipe template',
-    'close-workflow'                         => 'Tutup alur kerja tiket',
+    'template-types'                         => 'Tipe Template',
+    'close-workflow'                         => 'Tutup Alur Kerja Tiket',
     'template'                               => 'Templat',
-    'rating_label'                           => 'Label penilaian',
-    'display_order'                          => 'Tampilkan pesanan',
-    'rating_scale'                           => 'Skala penilaian',
-    'rating_area'                            => 'Rating area',
+    'rating_label'                           => 'Label Penilaian',
+    'display_order'                          => 'Tampilkan Pesanan',
+    'rating_scale'                           => 'Skala Penilaian',
+    'rating_area'                            => 'Rating Area',
 
     'modify'                                 => 'Ubah',
     'rating_name'                            => 'Nama peringkat',
@@ -1263,8 +1263,8 @@ return [
     'manage_status'                          => 'Kelola status',
     'notifications'                          => 'Pemberitahuan',
 
-    'auto_close_workflow'                => 'Tutup otomatis alur kerja',
-    'close_ticket_workflow_settings'     => 'Tutup pengaturan alur kerja tiket',
+    'auto_close_workflow'                => 'Tutup otomatis Alur Kerja',
+    'close_ticket_workflow_settings'     => 'Tutup pengaturan Alur Kerja tiket',
     'successfully_saved_your_settings'   => 'Berhasil menyimpan pengaturan Anda',
 
     /*
@@ -1303,7 +1303,7 @@ return [
     'addpages'                                          => 'Tambahkan halaman',
     'editpage'                                          => 'Edit halaman',
     'allpages'                                          => 'Semua halaman',
-    'widget'                                           => 'Widget',
+    'widgets'                                           => 'Widget',
     'widget-settings'                                   => 'Pengaturan widget',
     'footer1'                                           => 'Kaki 1',
     'footer2'                                           => 'Kaki 2',
@@ -1323,7 +1323,7 @@ return [
     'draft'                                             => 'Draf',
     'create_a_category'                                 => 'Buat kategori',
     'add'                                               => 'Tambah',
-    'social'                                            => 'sosial',
+    'social'                                            => 'Sosial',
     'social-widget-settings'                            => 'Pengaturan widget sosial',
     'comment'                                           => 'Komentar',
     'not_published'                                     => 'Tidak dipublikasikan',
@@ -1511,10 +1511,10 @@ return [
      * Persetujuan Diperbarui
      * -------------------------------------------------- -------------------------------------------------------
      */
-    'approval'              => 'Persetujuan',
-    'approval_tickets'      => 'tiket persetujuan',
-    'approve'               => 'Menyetujui',
-    'approval_request'      => 'Permintaan persetujuan',
+    'approval'             => 'Persetujuan',
+    'approval_tickets'     => 'Tiket persetujuan',
+    'approve'              => 'Menyetujui',
+    'approval_request'     => 'Permintaan persetujuan',
     'approvel_ticket_list' => 'Setujui daftar tiket',
 
     'approval_settings'                       => 'Pengaturan persetujuan',
@@ -1621,8 +1621,8 @@ return [
     'your-ticket-status-changed'                    => 'Status tiket Anda telah diubah.',
     'reload-be-patient-message'                     => 'Mohon bersabar kami sedang memuat ulang halaman.',
     'status-changed-successfully'                   => 'Status berhasil diubah.',
-    'system-outgoing-incoming-mail-not-configured' => 'Anda belum mengonfigurasi email sistem. Faveo tidak dapat mengambil tiket dari surat atau mengirim surat ke pengguna tanpa itu.',
-    'configure-the-mail-now'                        => 'Klik di sini untuk mengkonfigurasi email.',
+    'system-outgoing-incoming-mail-not-configured'  => 'Anda belum mengatur email sistem. Tidak dapat mengambil tiket dari surat atau mengirim surat ke pengguna tanpa itu.',
+    'configure-the-mail-now'                        => 'Klik di sini untuk mengatur email.',
     'system-mail-not-configured-agent-message'      => 'Pengaturan email masuk dan keluar sistem tidak dikonfigurasi. Silakan hubungi admin sistem Anda dan laporkan masalahnya.',
     'ticket-assigned-successfully'                  => 'Tiket yang dipilih telah berhasil ditetapkan.',
     'canned_response_deleted'                       => 'Respons terekam berhasil dihapus',
