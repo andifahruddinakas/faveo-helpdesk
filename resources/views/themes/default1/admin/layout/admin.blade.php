@@ -387,7 +387,7 @@
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
 
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                {{-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
 
                     <div class="image">
 
@@ -402,14 +402,14 @@
                                 href="{!! url('profile') !!}">{!! Auth::user()->first_name !!}{!! ' ' . Auth::user()->last_name !!}</a>
                         @endif
                     </div>
-                </div>
+                </div> --}}
 
                 <nav class="mt-2">
 
                     <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview"
                         role="menu" data-accordion="false">
                         @if ($replaceside == 0)
-                            <li class="nav-header">{!! Lang::get('lang.settings-2') !!}</li>
+                            {{-- <li class="nav-header">{!! Lang::get('lang.settings-2') !!}</li> --}}
 
                             <li @yield('staff-menu-parent') class="nav-item">
 
@@ -668,16 +668,16 @@
                                         </a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ url('storage') }}" @yield('storage') class="nav-link">
                                             <i class="nav-icon fas fa-save"></i>
                                             <p>{!! Lang::get('storage::lang.storage') !!}</p>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </li>
 
-                            <li @yield('error-menu-parent') class="nav-item">
+                            {{-- <li @yield('error-menu-parent') class="nav-item">
 
                                 <a href="#" @yield('error-bugs') class="nav-link">
                                     <i class="nav-icon fas fa-heartbeat"></i>
@@ -694,7 +694,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> --}}
 
                             <li @yield('widget-menu-parent') class="nav-item">
 
@@ -721,7 +721,7 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="{{ url('plugins') }}" @yield('Plugins') class="nav-link">
                                     <i class="nav-icon fas fa-plug"></i>
                                     <p>{!! Lang::get('lang.plugin') !!}</p>
@@ -733,7 +733,7 @@
                                     <i class="nav-icon fas fa-cogs"></i>
                                     <p>{!! Lang::get('lang.api') !!}</p>
                                 </a>
-                            </li>
+                            </li> --}}
 
                             <li class="nav-item">
                                 <a href="{{ url('logs') }}" @yield('Log') class="nav-link">
