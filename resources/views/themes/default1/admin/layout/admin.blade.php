@@ -631,12 +631,12 @@
                                         </a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ url('social/media') }}" @yield('social-login') class="nav-link">
                                             <i class="nav-icon fas fa-globe"></i>
                                             <p>{!! Lang::get('lang.social-login') !!}</p>
                                         </a>
-                                    </li>
+                                    </li> --}}
 
                                     <li class="nav-item">
                                         <a href="{{ url('languages') }}" @yield('languages') class="nav-link">

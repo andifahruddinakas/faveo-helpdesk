@@ -455,7 +455,7 @@
 
 
                 <!--/.col-md-2-->
-                <div class="col-md-2 col-sm-6">
+                {{-- <div class="col-md-2 col-sm-6">
                     <div class="settingiconblue">
                         <div class="settingdivblue">
                             <a href="{{ url('social/media') }}">
@@ -466,7 +466,7 @@
                         </div>
                         <div class="text-center text-sm">{{ Lang::get('lang.social-login') }}</div>
                     </div>
-                </div>
+                </div> --}}
                 <!--/.col-md-2-->
                 <div class="col-md-2 col-sm-6">
                     <div class="settingiconblue">
