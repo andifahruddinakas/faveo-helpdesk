@@ -1657,6 +1657,6 @@ return [
 
     // Tombol
     'create' => 'Buat',
-    'update' => 'Ubah',
+    'edit'   => 'Ubah',
     'delete' => 'Hapus',
 ];
