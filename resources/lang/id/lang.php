@@ -752,7 +752,7 @@ return [
     'delete'              => 'Hapus',
     'agents'              => 'Agen',
     'create'              => 'Buat',
-    'edit'                => 'Edit',
+    'edit'                => 'Ubah',
     'departments'         => 'Departemen',
     'groups'              => 'Grup',
     'time_zones'          => 'Zona Waktu',
@@ -808,7 +808,7 @@ return [
     'disable_for_this_department'                       => 'Nonaktifkan untuk departemen ini',
     'auto_response_email'                               => 'Email Balasan Otomatis',
     'recipient'                                         => 'Penerima',
-    'group_access'                                      => 'Akses grup',
+    'group_access'                                      => 'Akses Grup',
     'department_signature'                              => 'Tanda tangan Departemen',
     'list_of_departments'                               => 'Daftar Departemen',
     'create_a_department'                               => 'Buat Departemen',
@@ -853,7 +853,7 @@ return [
       | Grup Buat Halaman
       |--------------------------------------------------
      */
-    'create_group'                                                                            => 'Buat grup',
+    'create_group'                                                                            => 'Buat Grup',
     'group'                                                                                   => 'Grup',
     'can_create_ticket'                                                                       => 'Dapat membuat tiket',
     'can_edit_ticket'                                                                         => 'Dapat mengedit tiket',
@@ -868,11 +868,11 @@ return [
     'can_view_agent_stats'                                                                    => 'Dapat melihat statistik agen',
     'department_access'                                                                       => 'Akses Departemen',
     'admin_notes'                                                                             => 'Catatan Admin',
-    'group_members'                                                                           => 'Anggota grup',
-    'group_name'                                                                              => 'Nama grup',
-    'select_a_group'                                                                          => 'Pilih grup',
-    'create_a_group'                                                                          => 'Buat grup',
-    'edit_a_group'                                                                            => 'Ubah grup',
+    'group_members'                                                                           => 'Anggota Grup',
+    'group_name'                                                                              => 'Nama Grup',
+    'select_a_group'                                                                          => 'Pilih Grup',
+    'create_a_group'                                                                          => 'Buat Grup',
+    'edit_a_group'                                                                            => 'Ubah Grup',
     'group_created_successfully'                                                              => 'Grup berhasil dibuat',
     'group_can_not_create'                                                                    => 'Grup tidak dapat dibuat',
     'group_updated_successfully'                                                              => 'Grup berhasil diperbarui',
@@ -882,7 +882,7 @@ return [
     'group_deleted_successfully'                                                              => 'Grup berhasil dihapus',
     'group_cannot_delete'                                                                     => 'Grup tidak dapat dihapus',
     'failed_to_load_the_page'                                                                 => 'Gagal memuat halaman',
-    'list_of_groups'                                                                          => 'Daftar grup',
+    'list_of_groups'                                                                          => 'Daftar Grup',
     /*
       |--------------------------------------------------
       | Halaman SMTP
