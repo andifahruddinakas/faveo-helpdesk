@@ -326,7 +326,7 @@
                         <img src="{{ asset("lb-faveo/flags/$src") }}">
                     </a>
 
-                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right p-0" style="width: 290px;">
+                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right p-0" style="width: auto;">
 
                         @foreach ($langs as $key => $value)
                             <?php $src = $key . '.png'; ?>
@@ -336,7 +336,6 @@
                                 @if (Lang::getLocale() == 'ar')
                                     &rlm;
                                 @endif
-                                ({{ $value[1] }})
                             </a>
                         @endforeach
                     </div>
@@ -793,7 +792,7 @@
                                     <i class="fas fa-exclamation-triangle"></i>
                                     @if (\Auth::user()->role == 'admin')
                                         {{ Lang::get('lang.system-outgoing-incoming-mail-not-configured') }}&nbsp;<a
-                                            href="{{ URL::route('emails.create') }}">{{ Lang::get('lang.confihure-the-mail-now') }}</a>
+                                            href="{{ URL::route('emails.create') }}">{{ Lang::get('lang.configure-the-mail-now') }}</a>
                                     @else
                                         {{ Lang::get('lang.system-mail-not-configured-agent-message') }}
                                     @endif
