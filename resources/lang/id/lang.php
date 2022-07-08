@@ -1659,4 +1659,7 @@ return [
     'create' => 'Buat',
     'edit'   => 'Ubah',
     'delete' => 'Hapus',
+
+    // Lainnya
+    'not_found' => '<h3><b>Maaf!</b></h3> Tidak ada hasil yang ditemukan.',
 ];

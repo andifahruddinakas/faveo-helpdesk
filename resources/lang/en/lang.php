@@ -1659,4 +1659,7 @@ return [
     'create' => 'Create',
     'update' => 'Update',
     'delete' => 'Delete',
+
+    // Lainnya
+    'not_found' => '<h3><b>Sorry!</b></h3> No result has found.',
 ];
