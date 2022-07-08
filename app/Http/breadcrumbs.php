@@ -582,15 +582,15 @@ Breadcrumbs::register('social.media', function ($breadcrumbs) {
 });
 Breadcrumbs::register('priority.index', function ($breadcrumbs) {
     $breadcrumbs->parent('setting');
-    $breadcrumbs->push(Lang::get('Ticket Priority'), route('priority.index'));
+    $breadcrumbs->push(Lang::get('lang.ticket_priority'), route('priority.index'));
 });
 Breadcrumbs::register('priority.create', function ($breadcrumbs) {
     $breadcrumbs->parent('setting');
-    $breadcrumbs->push(Lang::get('Ticket Priority'), route('priority.index'));
+    $breadcrumbs->push(Lang::get('lang.ticket_priority'), route('priority.index'));
     $breadcrumbs->push(Lang::get('lang.create'), route('priority.create'));
 });
 Breadcrumbs::register('priority.edit', function ($breadcrumbs) {
-    $breadcrumbs->push(Lang::get('Ticket Priority'), route('priority.index'));
+    $breadcrumbs->push(Lang::get('lang.ticket_priority'), route('priority.index'));
     $breadcrumbs->push(Lang::get('Edit'), route('priority.index'));
 });
 
