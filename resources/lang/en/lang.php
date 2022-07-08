@@ -1662,4 +1662,16 @@ return [
 
     // Lainnya
     'not_found' => '<h3><b>Sorry!</b></h3> No result has found.',
+
+    // Front
+    'knowledge_base' => 'Knowledge Base',
+    'search_result' => 'Search Result',
+
+    'article' => 'Article',
+    'article_list' => 'Article List',
+
+    'category' => 'Category',
+    'category_list' => 'Category List',
+
+    'pages' => 'Pages',
 ];

@@ -529,32 +529,32 @@ Breadcrumbs::register('page.show', function ($breadcrumbs) {
     $breadcrumbs->push(Lang::get('lang.view'), url('page/{page}'));
 });
 Breadcrumbs::register('article-list', function ($breadcrumbs) {
-    $breadcrumbs->push('Article List', route('article-list'));
+    $breadcrumbs->push(Lang::get('lang.article_list'), route('article-list'));
 });
 
 Breadcrumbs::register('search', function ($breadcrumbs) {
-    $breadcrumbs->push('Knowledge-base', route('home'));
-    $breadcrumbs->push('Search Result');
+    $breadcrumbs->push(Lang::get('lang.knowledge_base'), route('home'));
+    $breadcrumbs->push(Lang::get('lang.search_result'));
 });
 
 Breadcrumbs::register('show', function ($breadcrumbs) {
-    $breadcrumbs->push('Knowledge-base', route('home'));
-    $breadcrumbs->push('Article List', route('article-list'));
-    $breadcrumbs->push('Article');
+    $breadcrumbs->push(Lang::get('lang.knowledge_base'), route('home'));
+    $breadcrumbs->push(Lang::get('lang.article_list'), route('article-list'));
+    $breadcrumbs->push(Lang::get('lang.article'));
 });
 Breadcrumbs::register('category-list', function ($breadcrumbs) {
-    $breadcrumbs->push('Category List', route('category-list'));
+    $breadcrumbs->push(Lang::get('lang.category_list'), route('category-list'));
 });
 Breadcrumbs::register('categorylist', function ($breadcrumbs) {
-    $breadcrumbs->push('Category List', route('category-list'));
-    $breadcrumbs->push('Category');
+    $breadcrumbs->push(Lang::get('lang.category_list'), route('category-list'));
+    $breadcrumbs->push(Lang::get('lang.category'));
 });
 Breadcrumbs::register('contact', function ($breadcrumbs) {
     $breadcrumbs->parent('/');
     $breadcrumbs->push(Lang::get('lang.contact'), route('contact'));
 });
 Breadcrumbs::register('pages', function ($breadcrumbs) {
-    $breadcrumbs->push('Pages');
+    $breadcrumbs->push(Lang::get('lang.pages'));
 });
 Breadcrumbs::register('queue', function ($breadcrumbs) {
     $breadcrumbs->parent('setting');

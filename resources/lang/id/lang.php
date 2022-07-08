@@ -1055,9 +1055,9 @@ return [
     'ticket_id'                                       => 'ID Tiket',
     'prioritas'                                       => 'Prioritas',
     'from'                                            => 'Dari',
-    'last_replier'                                    => 'Pembalas terakhir',
+    'last_replier'                                    => 'Pembalas Terakhir',
     'assigned_to'                                     => 'Ditugaskan ke',
-    'last_activity'                                   => 'Aktivitas terakhir',
+    'last_activity'                                   => 'Aktivitas Terakhir',
     'answered'                                        => 'Terjawab',
     'assigned'                                        => 'Ditugaskan',
     'create_ticket'                                   => 'Buat Tiket',
@@ -1662,4 +1662,16 @@ return [
 
     // Lainnya
     'not_found' => '<h3><b>Maaf!</b></h3> Tidak ada hasil yang ditemukan.',
+
+    // Front
+    'knowledge_base' => 'Dasar Pengetahuan',
+    'search_result' => 'Hasil Pencarian',
+
+    'article' => 'Artikel',
+    'article_list' => 'Daftar Artikel',
+
+    'category' => 'Kategori',
+    'category_list' => 'Daftar Kategori',
+
+    'pages' => 'Halaman',
 ];
