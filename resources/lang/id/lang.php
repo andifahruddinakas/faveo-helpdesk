@@ -51,7 +51,7 @@ return [
     'password_confirmation'                   => 'Konfirmasi kata sandi',
     'woops'                                   => 'Ups!',
     'theirisproblem'                          => 'Ada beberapa masalah dengan masukan Anda.',
-    'email'                                  => 'Email',
+    'email'                                   => 'Email',
     'reg_new_member'                          => 'Daftar keanggotaan baru',
     'this_account_is_currently_inactive'      => 'Akun ini sedang tidak aktif!',
     'not-registered'                          => 'Email/nama pengguna tidak terdaftar',
@@ -65,6 +65,8 @@ return [
     'get-verify-message'                      => 'Masukkan kode OTP yang telah kami kirimkan ke nomor baru Anda.',
     'number-verification-sussessfull'         => 'Nomor Anda telah berhasil diverifikasi, harap tunggu kami memperbarui profil Anda.',
     'enter_your_email_here'                   => 'Masukkan Email Anda Disini',
+    'account'                                 => 'Sudah punya akun?',
+
     /*
       |--------------------------------------------------
       | Halaman Daftar
@@ -185,6 +187,8 @@ return [
       |--------------------------------------------------
      */
     'templates'                                 => 'Template',
+    'all_templates'                             => 'Semua Template',
+    'all_templates_sets'                        => 'Set Semua Template',
     'template_set'                              => 'Set Template',
     'create_template'                           => 'Buat Template',
     'edit_template'                             => 'Ubah Template',
@@ -1277,8 +1281,10 @@ return [
     'noti_msg1'                                    => 'Hari untuk menghapus log notifikasi',
     'noti_msg2'                                    => 'Anda dapat memasukkan jumlah hari log database yang akan dihapus & riwayat pemberitahuan akan dihapus sejak hari yang ditentukan.',
     'del_all_read'                                 => 'Hapus semua yang sudah dibaca',
-    'You_have_deleted_all_the_read_notifications' => 'Anda telah menghapus semua notifikasi yang telah dibaca',
+    'You_have_deleted_all_the_read_notifications'  => 'Anda telah menghapus semua notifikasi yang telah dibaca',
     'view_all_notifications'                       => 'Lihat semua notifikasi',
+    'all_notifications'                            => 'Semua notifikasi',
+    'notifications_settings'                       => 'Pengaturan notifikasi',
     /*
       |------------------------------------------------
       | Halaman Kesalahan
@@ -1662,6 +1668,7 @@ return [
 
     // Lainnya
     'not_found' => '<h3><b>Maaf!</b></h3> Tidak ada hasil yang ditemukan.',
+    'readmails' => 'Baca mail',
 
     // Front
     'knowledge_base' => 'Dasar Pengetahuan',

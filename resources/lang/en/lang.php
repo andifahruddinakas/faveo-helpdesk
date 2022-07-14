@@ -65,6 +65,7 @@ return [
     'get-verify-message'                     => 'Enter the OTP code we\'ve sent to your new number.',
     'number-verification-sussessfull'        => 'Your number has been verified successfully, please wait we are updating your profile.',
     'enter_your_email_here'                  => 'Enter Your Email Here',
+    'account'                                => 'Already got an account?',
     /*
       |--------------------------------------
       |   Register Page
@@ -185,7 +186,8 @@ return [
       |--------------------------------------
      */
     'templates'                                => 'Templates',
-    'template_set'                             => 'Template sets',
+    'all_templates'                            => 'All Templates',
+    'all_templates_sets'                       => 'Set All Template',
     'create_template'                          => 'Create template',
     'edit_template'                            => 'Edit template',
     'list_of_templates_sets'                   => 'List of templates set',
@@ -1279,6 +1281,8 @@ return [
     'del_all_read'                                => 'Delete all read',
     'You_have_deleted_all_the_read_notifications' => 'You have deleted all the read notifications',
     'view_all_notifications'                      => 'View all notifications',
+    'all_notifications'                           => 'all notifications',
+    'notifications_settings'                      => 'Settings notifications',
     /*
       |------------------------------------------------
       |   Error Pages
@@ -1662,6 +1666,7 @@ return [
 
     // Lainnya
     'not_found' => '<h3><b>Sorry!</b></h3> No result has found.',
+    'readmails' => 'readmails',
 
     // Front
     'knowledge_base' => 'Knowledge Base',
