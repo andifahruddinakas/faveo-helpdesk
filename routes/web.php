@@ -13,7 +13,7 @@
 Route::group(['middleware' => ['web']], function () {
     Route::group(['middleware' => ['install', 'update']], function () {
         Auth::routes();
-        Route::post('login', ['uses' => 'Auth\AuthController@postLogin', 'as' => 'post.login']);
+        Route::post(Lang::get('lang.login'), ['uses' => 'Auth\AuthController@postLogin', 'as' => 'post.login']);
         Route::post('auth/register', ['uses' => 'Auth\AuthController@postRegister', 'as' => 'post.register']);
         Route::post('password/reset', ['uses' => 'Auth\PasswordController@reset', 'as' => 'post.reset']);
         Route::get('auth/logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'get.logout']);
@@ -32,24 +32,24 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('password/email/{one?}/{two?}/{three?}/{four?}/{five?}', ['as' => 'password.email', 'uses' => 'Auth\PasswordController@getEmail']);
     Breadcrumbs::register('password.email', function ($breadcrumbs) {
         $breadcrumbs->parent('/');
-        $breadcrumbs->push('Login', url('auth/login'));
-        $breadcrumbs->push('Forgot Password', url('password/email'));
+        $breadcrumbs->push(Lang::get('lang.login'), url('auth/login'));
+        $breadcrumbs->push(Lang::get('lang.forgot_password'), url('password/email'));
     });
 
     // register page
     Route::get('auth/register/{one?}/{two?}/{three?}/{four?}/{five?}', ['as' => 'auth.register', 'uses' => 'Auth\AuthController@getRegister']);
     Breadcrumbs::register('auth.register', function ($breadcrumbs) {
         $breadcrumbs->parent('/');
-        $breadcrumbs->push('Login', url('auth/login'));
-        $breadcrumbs->push('Create Account', url('auth/register'));
+        $breadcrumbs->push(Lang::get('lang.login'), url('auth/login'));
+        $breadcrumbs->push(Lang::get('lang.create_account'), url('auth/register'));
     });
 
     // Auth login
     Route::get('auth/login/{one?}/{two?}/{three?}/{four?}/{five?}', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@getLogin']);
     Breadcrumbs::register('auth.login', function ($breadcrumbs) {
         $breadcrumbs->parent('/');
-        $breadcrumbs->push('Create Account', url('auth/register'));
-        $breadcrumbs->push('Login', url('auth/login'));
+        $breadcrumbs->push(Lang::get('lang.create_account'), url('auth/register'));
+        $breadcrumbs->push(Lang::get('lang.login'), url('auth/login'));
     });
 
     Route::get('account/activate/{token}', ['as' => 'account.activate', 'uses' => 'Auth\AuthController@accountActivate']);

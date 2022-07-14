@@ -65,6 +65,7 @@ return [
     'get-verify-message'                     => 'Enter the OTP code we\'ve sent to your new number.',
     'number-verification-sussessfull'        => 'Your number has been verified successfully, please wait we are updating your profile.',
     'enter_your_email_here'                  => 'Enter Your Email Here',
+    'account'                                => 'Already got an account?',
     /*
       |--------------------------------------
       |   Register Page
@@ -185,7 +186,8 @@ return [
       |--------------------------------------
      */
     'templates'                                => 'Templates',
-    'template_set'                             => 'Template sets',
+    'all_templates'                            => 'All Templates',
+    'all_templates_sets'                       => 'Set All Template',
     'create_template'                          => 'Create template',
     'edit_template'                            => 'Edit template',
     'list_of_templates_sets'                   => 'List of templates set',
@@ -1279,6 +1281,8 @@ return [
     'del_all_read'                                => 'Delete all read',
     'You_have_deleted_all_the_read_notifications' => 'You have deleted all the read notifications',
     'view_all_notifications'                      => 'View all notifications',
+    'all_notifications'                           => 'all notifications',
+    'notifications_settings'                      => 'Settings notifications',
     /*
       |------------------------------------------------
       |   Error Pages
@@ -1622,7 +1626,7 @@ return [
     'reload-be-patient-message'                    => 'Please be patient we are reloading the page.',
     'status-changed-successfully'                  => 'Status changed successfully.',
     'system-outgoing-incoming-mail-not-configured' => 'You have not configured system mail. Faveo can\'t fetch tickets from mail or send mail to users without it.',
-    'confihure-the-mail-now'                       => 'Click here to configure the mail.',
+    'configure-the-mail-now'                       => 'Click here to configure the mail.',
     'system-mail-not-configured-agent-message'     => 'System incoming and outgoing email settings are not configured. Please contct your system\'s admin and report the problem.',
     'ticket-assigned-successfully'                 => 'Selected tickets have been assigned sucessfully.',
     'canned_response_deleted'                      => 'Canned response deleted successfully',
@@ -1654,4 +1658,25 @@ return [
     'clean-forever'                                => 'delete permanently',
     'mail-sent-to-job-for-process'                 => 'Mail has been sent to job for process, it will appear in your mailbox once it gets processed by your selected queue service. If you don\'t recieve the mail check logs for errors or warnings.',
     'click-here-to-see-more-details'               => 'Click here to see more details',
+
+    // Button
+    'create' => 'Create',
+    'update' => 'Update',
+    'delete' => 'Delete',
+
+    // Lainnya
+    'not_found' => '<h3><b>Sorry!</b></h3> No result has found.',
+    'readmails' => 'readmails',
+
+    // Front
+    'knowledge_base' => 'Knowledge Base',
+    'search_result' => 'Search Result',
+
+    'article' => 'Article',
+    'article_list' => 'Article List',
+
+    'category' => 'Category',
+    'category_list' => 'Category List',
+
+    'pages' => 'Pages',
 ];
