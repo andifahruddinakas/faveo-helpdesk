@@ -51,7 +51,7 @@ return [
     'password_confirmation'                   => 'Konfirmasi kata sandi',
     'woops'                                   => 'Ups!',
     'theirisproblem'                          => 'Ada beberapa masalah dengan masukan Anda.',
-    'email'                                   => 'Email',
+    'e-mail'                                  => 'Email',
     'reg_new_member'                          => 'Daftar keanggotaan baru',
     'this_account_is_currently_inactive'      => 'Akun ini sedang tidak aktif!',
     'not-registered'                          => 'Email/nama pengguna tidak terdaftar',
