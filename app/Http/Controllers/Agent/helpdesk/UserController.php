@@ -306,7 +306,7 @@ class UserController extends Controller
                 return redirect()->back()->with(['fails' => Lang::get('lang.country-code-required-error'), 'country_code_error' => 1])->withInput();
             } else {
                 $code = CountryCode::select('phonecode')->where('phonecode', '=', $request->get('country_code'))->get();
-                if (!count($code)) {
+                if (! count($code)) {
                     return redirect()->back()->with(['fails' => Lang::get('lang.incorrect-country-code-error'), 'country_code_error' => 1])->withInput();
                 }
             }
@@ -599,8 +599,8 @@ class UserController extends Controller
             }
         }
         // } catch (Exception $e) {
-            /* redirect to Index page with Fails Message */
-            // return redirect('user')->with('fails', $e->getMessage());
+        /* redirect to Index page with Fails Message */
+        // return redirect('user')->with('fails', $e->getMessage());
         // }
     }
 
@@ -683,7 +683,7 @@ class UserController extends Controller
                 return redirect()->back()->with(['fails' => Lang::get('lang.country-code-required-error'), 'country_code_error' => 1])->withInput();
             } else {
                 $code = CountryCode::select('phonecode')->where('phonecode', '=', $request->get('country_code'))->get();
-                if (!count($code)) {
+                if (! count($code)) {
                     return redirect()->back()->with(['fails' => Lang::get('lang.incorrect-country-code-error'), 'country_code_error' => 1])->withInput();
                 } else {
                     $users->country_code = $request->country_code;
@@ -737,7 +737,7 @@ class UserController extends Controller
         try {
             return view('themes.default1.agent.helpdesk.user.profile-edit', compact('user'))
                             ->with(['phonecode' => $phonecode->phonecode,
-                                'verify'        => $status, ]);
+                                'verify' => $status, ]);
         } catch (Exception $e) {
             return redirect()->back()->with('fails', $e->getMessage());
         }
@@ -760,7 +760,7 @@ class UserController extends Controller
                 return redirect()->back()->with(['fails' => Lang::get('lang.country-code-required-error'), 'country_code_error' => 1])->withInput();
             } else {
                 $code = CountryCode::select('phonecode')->where('phonecode', '=', $request->get('country_code'))->get();
-                if (!count($code)) {
+                if (! count($code)) {
                     return redirect()->back()->with(['fails' => Lang::get('lang.incorrect-country-code-error'), 'country_code_error' => 1])->withInput();
                 }
                 $user->country_code = $request->country_code;
@@ -969,7 +969,7 @@ class UserController extends Controller
         }
         $org_relations->create([
             'user_id' => $userid,
-            'org_id'  => $orgid,
+            'org_id' => $orgid,
         ]);
     }
 
@@ -1045,7 +1045,7 @@ class UserController extends Controller
                 ->first();
         if ($otp != null) {
             $otp_length = strlen(Input::get('otp'));
-            if (($otp_length == 6 && !preg_match('/[a-z]/i', Input::get('otp')))) {
+            if (($otp_length == 6 && ! preg_match('/[a-z]/i', Input::get('otp')))) {
                 $otp2 = Hash::make(Input::get('otp'));
                 $date1 = date_format($otp->updated_at, 'Y-m-d h:i:sa');
                 $date2 = date('Y-m-d h:i:sa');

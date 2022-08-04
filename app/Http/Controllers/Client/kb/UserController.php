@@ -38,7 +38,7 @@ class UserController extends Controller
     {
         $setting = $settings->first();
         $pagination = $setting->pagination;
-        if (!Auth::check() || \Auth::user()->role == 'user') {
+        if (! Auth::check() || \Auth::user()->role == 'user') {
             $article = $article->where('status', '1');
         }
         $article = $article->where('type', '1');
@@ -113,7 +113,7 @@ class UserController extends Controller
         $date = \Carbon\Carbon::now()->toDateTimeString();
         $arti = $article->where('slug', $slug);
 
-        if (!Auth::check() || \Auth::user()->role == 'user') {
+        if (! Auth::check() || \Auth::user()->role == 'user') {
             $arti = $arti->where('status', '1');
             $arti = $arti->where('publish_time', '<', $date);
         }
@@ -133,7 +133,7 @@ class UserController extends Controller
     {
         /* get the article_id where category_id == current category */
         $catid = $category->where('slug', $slug)->first();
-        if (!$catid) {
+        if (! $catid) {
             return redirect()->back()->with('fails', Lang::get('lang.we_are_sorry_but_the_page_you_are_looking_for_can_not_be_found'));
         }
         $id = $catid->id;
@@ -231,7 +231,7 @@ class UserController extends Controller
     public function postComment($slug, Article $article, CommentRequest $request, Comment $comment)
     {
         $article = $article->where('slug', $slug)->first();
-        if (!$article) {
+        if (! $article) {
             return Redirect::back()->with('fails', Lang::get('lang.sorry_not_processed'));
         }
         $id = $article->id;

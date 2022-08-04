@@ -96,7 +96,7 @@ class TeamController extends Controller
                     'team_lead' => $team_lead,
                 ]);
                 Assign_team_agent::create([
-                    'team_id'  => $team_update->id,
+                    'team_id' => $team_update->id,
                     'agent_id' => $team_lead,
                 ]);
             } else {

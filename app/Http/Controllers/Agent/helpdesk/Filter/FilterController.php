@@ -174,7 +174,7 @@ class FilterController extends Controller
         }
         ksort($inputs);
         foreach ($inputs as $key => $input) {
-            if (!in_array($key, $available_options)) {
+            if (! in_array($key, $available_options)) {
                 // dd('here '.$key);
                 $table = $table->where('tickets.id', '=', null);
             } else {
@@ -318,7 +318,7 @@ class FilterController extends Controller
                 return $table;
                 break;
 
-            // case 'show-overdue':
+                // case 'show-overdue':
             //     $table = $this->filterByDate('overdue', $value, $table);
             //     return $table;
             //     break;
@@ -857,7 +857,7 @@ class FilterController extends Controller
 
                 return [$start, $end];
                 break;
-            // cases for due date
+                // cases for due date
 
             case 'any-time':
                 return ['any'];

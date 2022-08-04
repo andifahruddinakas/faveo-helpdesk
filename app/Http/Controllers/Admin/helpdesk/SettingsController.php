@@ -122,7 +122,7 @@ class SettingsController extends Controller
     public function deleteLogo()
     {
         $path = $_GET['data1']; //get file path of logo image
-        if (!unlink($path)) {
+        if (! unlink($path)) {
             return 'false';
         } else {
             $companys = Company::where('id', '=', 1)->first();
@@ -210,7 +210,7 @@ class SettingsController extends Controller
 
             if ($request->has('itil')) {
                 $itil = $request->input('itil');
-                $sett = CommonSettings::firstOrCreate(['option_name'=>'itil']);
+                $sett = CommonSettings::firstOrCreate(['option_name' => 'itil']);
                 $sett->status = $itil;
                 $sett->save();
             }
@@ -368,29 +368,29 @@ class SettingsController extends Controller
         $condition = new \App\Model\MailJob\Condition();
         $job = $condition->checkActiveJob();
         $commands = [
-            ''                   => 'Select',
-            'everyMinute'        => 'Every Minute',
-            'everyFiveMinutes'   => 'Every Five Minute',
-            'everyTenMinutes'    => 'Every Ten Minute',
+            '' => 'Select',
+            'everyMinute' => 'Every Minute',
+            'everyFiveMinutes' => 'Every Five Minute',
+            'everyTenMinutes' => 'Every Ten Minute',
             'everyThirtyMinutes' => 'Every Thirty Minute',
-            'hourly'             => 'Every Hour',
-            'daily'              => 'Every Day',
-            'dailyAt'            => 'Daily at',
-            'weekly'             => 'Every Week',
-            'monthly'            => 'Monthly',
-            'yearly'             => 'Yearly',
+            'hourly' => 'Every Hour',
+            'daily' => 'Every Day',
+            'dailyAt' => 'Daily at',
+            'weekly' => 'Every Week',
+            'monthly' => 'Monthly',
+            'yearly' => 'Yearly',
         ];
         $followupcommands = [
-            ''                   => 'Select',
-            'everyMinute'        => 'Every Minute',
-            'everyFiveMinutes'   => 'Every Five Minute',
-            'everyTenMinutes'    => 'Every Ten Minute',
+            '' => 'Select',
+            'everyMinute' => 'Every Minute',
+            'everyFiveMinutes' => 'Every Five Minute',
+            'everyTenMinutes' => 'Every Ten Minute',
             'everyThirtyMinutes' => 'Every Thirty Minute',
-            'hourly'             => 'Every Hour',
-            'daily'              => 'Every Day',
-            'weekly'             => 'Every Week',
-            'monthly'            => 'Monthly',
-            'yearly'             => 'Yearly',
+            'hourly' => 'Every Hour',
+            'daily' => 'Every Day',
+            'weekly' => 'Every Week',
+            'monthly' => 'Monthly',
+            'yearly' => 'Yearly',
         ];
         if (ini_get('register_argc_argv') == '') {
             //$warn = "Please make 'register_argc_argv' flag as on. Or you can set all your job url in cron";
@@ -896,7 +896,7 @@ class SettingsController extends Controller
             $fetching_command = $this->getCommand($fetching_commands, $fetching_dailyAt);
             $notification_command = $this->getCommand($notification_commands, $notification_dailyAt);
             $work_command = $this->getCommand($work_commands, $workflow_dailyAt);
-            $jobs = ['fetching'=>$fetching_command, 'notification'=>$notification_command, 'work'=>$work_command];
+            $jobs = ['fetching' => $fetching_command, 'notification' => $notification_command, 'work' => $work_command];
             $this->storeCommand($jobs);
         }
     }
@@ -920,10 +920,10 @@ class SettingsController extends Controller
             }
         }
         if (count($array) > 0) {
-            foreach ($array as $key=>$save) {
+            foreach ($array as $key => $save) {
                 $command->create([
-                    'job'  => $key,
-                    'value'=> $save,
+                    'job' => $key,
+                    'value' => $save,
                 ]);
             }
         }
@@ -933,7 +933,7 @@ class SettingsController extends Controller
     {
         $this->validate($request, [
             'format' => ['required', 'regex:/^(?=.*[$|-|#]).+$/'],
-            'type'   => 'required',
+            'type' => 'required',
         ]);
 
         $format = $request->input('format');
@@ -1128,16 +1128,16 @@ class SettingsController extends Controller
             DB::commit();
             \Artisan::call('db:seed', ['--force' => true]);
             $user2 = \App\User::updateOrCreate(['id' => 1], [
-                'first_name'   => $user->first_name,
-                'last_name'    => $user->last_name,
-                'email'        => $user->email,
-                'user_name'    => $user->user_name,
-                'password'     => $user->password,
+                'first_name' => $user->first_name,
+                'last_name' => $user->last_name,
+                'email' => $user->email,
+                'user_name' => $user->user_name,
+                'password' => $user->password,
                 'assign_group' => 1,
-                'primary_dpt'  => 1,
-                'active'       => 1,
-                'agent_tzone'  => $user->agent_tzone,
-                'role'         => 'admin',
+                'primary_dpt' => 1,
+                'active' => 1,
+                'agent_tzone' => $user->agent_tzone,
+                'role' => 'admin',
             ]);
             $system2 = System::find(1);
             $system2->time_zone = $system->time_zone;

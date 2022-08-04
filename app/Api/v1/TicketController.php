@@ -102,7 +102,7 @@ class TicketController extends Controller
             $this->storeCollaborators($headers, $id);
 
             $thread = $this->ticketThread($subject, $body, $id, $user_id);
-            if (!empty($attach)) {
+            if (! empty($attach)) {
                 $this->attach($thread, $attach);
             }
 
@@ -305,7 +305,7 @@ class TicketController extends Controller
             }
             $thread->save();
 
-            if (!empty($attach)) {
+            if (! empty($attach)) {
                 $check_attachment = $this->attach($thread->id, $attach);
             }
 
@@ -318,7 +318,7 @@ class TicketController extends Controller
             $ticket_number = $tickets->ticket_number;
             $company = $this->company();
             $username = $ticket_user->user_name;
-            if (!empty(Auth::user()->agent_sign)) {
+            if (! empty(Auth::user()->agent_sign)) {
                 $agentsign = Auth::user()->agent_sign;
             } else {
                 $agentsign = null;
@@ -448,19 +448,19 @@ class TicketController extends Controller
             //dd($UserEmail);
             // $UserEmail = 'sujitprasad12@yahoo.in';
             $user = User::where('email', '=', $UserEmail)->first();
-            if (!$user) {
+            if (! $user) {
                 return ['error' => 'No agent not found'];
             }
             $user_id = $user->id;
             $ticket = Tickets::where('id', '=', $id)->first();
-            if (!$ticket) {
+            if (! $ticket) {
                 return ['error' => 'No ticket not found'];
             }
             $ticket_number = $ticket->ticket_number;
             $ticket->assigned_to = $user_id;
             $ticket->save();
             $ticket_thread = Ticket_Thread::where('ticket_id', '=', $id)->first();
-            if (!$ticket_thread) {
+            if (! $ticket_thread) {
                 return ['error' => 'No thread not found'];
             }
             $ticket_subject = $ticket_thread->title;

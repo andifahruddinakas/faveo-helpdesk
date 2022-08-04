@@ -34,7 +34,7 @@ class ApiExceptAuthController extends Controller
             }
 
             $url = $this->request->input('url');
-            if (!str_is('*/', $url)) {
+            if (! str_is('*/', $url)) {
                 $url = str_finish($url, '/');
             }
 

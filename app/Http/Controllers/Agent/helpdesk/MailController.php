@@ -78,7 +78,7 @@ class MailController extends Controller
     public function priority($email)
     {
         $priority = $email->priority;
-        if (!$priority) {
+        if (! $priority) {
             $priority = $this->ticketController()->getSystemDefaultPriority();
         }
 
@@ -95,7 +95,7 @@ class MailController extends Controller
     public function department($email)
     {
         $department = $email->department;
-        if (!$department) {
+        if (! $department) {
             $department = $this->ticketController()->getSystemDefaultDepartment();
         }
 
@@ -113,7 +113,7 @@ class MailController extends Controller
     {
         //dd($email);
         $helptopic = $email->help_topic;
-        if (!$helptopic) {
+        if (! $helptopic) {
             $helptopic = $this->ticketController()->getSystemDefaultHelpTopic();
         }
 
@@ -134,7 +134,7 @@ class MailController extends Controller
         if ($help) {
             $sla = $help->sla_plan;
         }
-        if (!$sla) {
+        if (! $sla) {
             $sla = $this->ticketController()->getSystemDefaultSla();
         }
 
@@ -190,17 +190,17 @@ class MailController extends Controller
     public function getMessageContent($message, $email)
     {
         $body = $message->getMessageBody(true);
-        if (!$body) {
+        if (! $body) {
             $body = $message->getMessageBody();
         }
         $body = $this->separateReply($body);
         $subject = $message->getSubject();
         $address = $message->getAddresses('reply-to');
-        if (!$address) {
+        if (! $address) {
             $address = $message->getAddresses('from');
         }
         $collaborators = $this->collaburators($message, $email);
-        $attachments = (!$message->getAttachments()) ? [] : $message->getAttachments();
+        $attachments = (! $message->getAttachments()) ? [] : $message->getAttachments();
         //dd(['body' => $body, 'subject' => $subject, 'address' => $address, 'cc' => $collaborator, 'attachments' => $attachments]);
         $this->workflow($address, $subject, $body, $collaborators, $attachments, $email);
     }

@@ -19,6 +19,7 @@ use Lang;
 class TemplateController extends Controller
 {
     public $template;
+
     public $type;
 
     public function __construct()
@@ -175,7 +176,7 @@ class TemplateController extends Controller
     {
         try {
             $ids = $request->input('select');
-            if (!empty($ids)) {
+            if (! empty($ids)) {
                 foreach ($ids as $id) {
                     $template = $this->template->where('id', $id)->first();
                     if ($template) {

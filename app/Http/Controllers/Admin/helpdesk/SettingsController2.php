@@ -248,7 +248,7 @@ class SettingsController2 extends Controller
     public function deleteLogo()
     {
         $path = $_GET['data1']; //get file path of logo image
-        if (!unlink($path)) {
+        if (! unlink($path)) {
             return 'false';
         } else {
             $companys = Company::where('id', '=', 1)->first();

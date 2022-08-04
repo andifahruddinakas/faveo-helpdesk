@@ -69,7 +69,7 @@ class MailController extends Controller
                 case 'log':
                     return $form;
                 case 'ses':
-                     $form .= "<div class='row'>".$this->form('Key', 'key', 'col-md-6 form-group');
+                    $form .= "<div class='row'>".$this->form('Key', 'key', 'col-md-6 form-group');
                     $form .= $this->form('Secret Key', 'secret', 'col-md-6 form-group').$this->form('Region', 'region', 'col-md-6 form-group').'</div>';
 
                     return $form;
