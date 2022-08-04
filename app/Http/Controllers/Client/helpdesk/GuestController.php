@@ -67,7 +67,7 @@ class GuestController extends Controller
 
         return view('themes.default1.client.helpdesk.profile', compact('user'))
                         ->with(['phonecode' => $phonecode->phonecode,
-                            'verify'        => $status, ]);
+                            'verify' => $status, ]);
     }
 
     /**
@@ -87,7 +87,7 @@ class GuestController extends Controller
                 return redirect()->back()->with(['fails' => Lang::get('lang.country-code-required-error'), 'country_code_error' => 1])->withInput();
             } else {
                 $code = CountryCode::select('phonecode')->where('phonecode', '=', $request->get('country_code'))->get();
-                if (!count($code)) {
+                if (! count($code)) {
                     return redirect()->back()->with(['fails' => Lang::get('lang.incorrect-country-code-error'), 'country_code_error' => 1])->withInput();
                 }
                 $user->country_code = $request->country_code;
@@ -299,7 +299,7 @@ class GuestController extends Controller
     public function PostCheckTicket(Request $request)
     {
         $validator = \Validator::make($request->all(), [
-            'email'         => 'required|email',
+            'email' => 'required|email',
             'ticket_number' => 'required',
         ]);
         if ($validator->fails()) {
@@ -409,7 +409,7 @@ class GuestController extends Controller
                                 ->first();
         if ($otp != null) {
             $otp_length = strlen(Input::get('otp'));
-            if (($otp_length == 6 && !preg_match('/[a-z]/i', Input::get('otp')))) {
+            if (($otp_length == 6 && ! preg_match('/[a-z]/i', Input::get('otp')))) {
                 $otp2 = Hash::make(Input::get('otp'));
                 $date1 = date_format($otp->updated_at, 'Y-m-d h:i:sa');
                 $date2 = date('Y-m-d h:i:sa');
@@ -537,10 +537,10 @@ class GuestController extends Controller
         if (count($user) > 0) {
             foreach ($user as $key => $value) {
                 $info->create([
-                    'owner'   => $id,
+                    'owner' => $id,
                     'service' => $provider,
-                    'key'     => $key,
-                    'value'   => $value,
+                    'key' => $key,
+                    'value' => $value,
                 ]);
             }
         }
@@ -549,7 +549,7 @@ class GuestController extends Controller
     public function changeEmail($email)
     {
         $user = \Auth::user();
-        if ($user && $email && !$user->email) {
+        if ($user && $email && ! $user->email) {
             $user->email = $email;
             $user->save();
         }

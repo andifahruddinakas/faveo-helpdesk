@@ -8,6 +8,7 @@
      * @author Vijay Sebastian<vijay.sebastian@ladybirdweb.com>
      * @name Faveo
      */
+
     Route::group(['prefix' => 'api/v1'], function () {
         Route::post('authenticate', '\App\Api\v1\TokenAuthController@authenticate');
         Route::get('authenticate/user', '\App\Api\v1\TokenAuthController@getAuthenticatedUser');
@@ -62,6 +63,7 @@
          */
         Route::post('fcmtoken', ['as' => 'fcmtoken', 'uses' => 'Common\PushNotificationController@fcmToken']);
     });
+
     /*
      * ================================================================================================
      * @version v1
@@ -70,6 +72,7 @@
      * @author Manish Verma<manish.verma@ladybirdweb.com>
      * @name Faveo
      */
+
     Route::group(['prefix' => 'api/v2'], function () {
         /*
          * Helpdesk

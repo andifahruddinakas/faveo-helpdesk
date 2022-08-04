@@ -98,7 +98,7 @@ class SetupTestEnv extends Command
     {
         try {
             echo "\nMigrating...\n";
-            Artisan::call('migrate', ['--force'=>true]);
+            Artisan::call('migrate', ['--force' => true]);
 
             echo Artisan::output();
 
@@ -129,7 +129,7 @@ class SetupTestEnv extends Command
 
             if (file_exists($migrationPath)) {
                 echo "\nMigrating $plugin tables\n";
-                Artisan::call('migrate', ['--path'=>$migrationRelativePath, '--force'=>true]);
+                Artisan::call('migrate', ['--path' => $migrationRelativePath, '--force' => true]);
                 echo Artisan::output();
             }
         }
@@ -144,7 +144,7 @@ class SetupTestEnv extends Command
     {
         try {
             echo "\nSeeding...\n";
-            Artisan::call('db:seed', ['--force'=>true]);
+            Artisan::call('db:seed', ['--force' => true]);
             echo Artisan::output();
             echo "\nSeeded Successfully!\n";
         } catch (\Exception $e) {
@@ -159,7 +159,7 @@ class SetupTestEnv extends Command
      */
     private function updateAppUrl()
     {
-        return System::first()->update(['url'=>'http://localhost:8000']);
+        return System::first()->update(['url' => 'http://localhost:8000']);
     }
 
     /**

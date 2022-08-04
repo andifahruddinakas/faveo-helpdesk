@@ -185,20 +185,20 @@ function utfEncoding($name)
 
 function faveoDate($date = '', $format = '', $tz = '')
 {
-    if (!$date) {
+    if (! $date) {
         $date = \Carbon\Carbon::now();
     }
-    if (!is_object($date)) {
+    if (! is_object($date)) {
         $date = carbon($date);
     }
 
-    if (!$format || !$tz) {
+    if (! $format || ! $tz) {
         $system = App\Model\helpdesk\Settings\System::select('time_zone', 'date_time_format')->first();
     }
-    if (!$format) {
+    if (! $format) {
         $format = is_numeric($system->date_time_format) ? DB::table('date_time_format')->where('id', $system->date_time_format)->value('format') : $system->date_time_format;
     }
-    if (!$tz) {
+    if (! $tz) {
         $tz = is_numeric($system->time_zone) ? DB::table('timezone')->where('id', $system->time_zone)->value('name') : $system->time_zone;
     }
 
@@ -235,7 +235,7 @@ function timezone()
  */
 function errorResponse($errorMsg, $responseCode = 400)
 {
-    $response = ['success'=>false, 'message'=>$errorMsg];
+    $response = ['success' => false, 'message' => $errorMsg];
 
     return response()->json($response, $responseCode);
 }
@@ -251,7 +251,7 @@ function errorResponse($errorMsg, $responseCode = 400)
  */
 function successResponse($successMsg = '', $data = '', $responseCode = 200)
 {
-    $response = !$successMsg ? ['success'=>true, 'data'=>$data] : (!$data ? ['success'=>true, 'message'=>$successMsg] : ['success'=>true, 'message'=>$successMsg, 'data'=>$data]);
+    $response = ! $successMsg ? ['success' => true, 'data' => $data] : (! $data ? ['success' => true, 'message' => $successMsg] : ['success' => true, 'message' => $successMsg, 'data' => $data]);
 
     return response()->json($response);
 }
@@ -263,12 +263,12 @@ function successResponse($successMsg = '', $data = '', $responseCode = 200)
  *
  * @return Response with json response content
  */
-function exceptionResponse(\Exception $exception)
+function exceptionResponse(Exception $exception)
 {
     return errorResponse([
-        'file'       => $exception->getFile(),
-        'line_number'=> $exception->getLine(),
-        'exception'  => $exception->getMessage(),
+        'file' => $exception->getFile(),
+        'line_number' => $exception->getLine(),
+        'exception' => $exception->getMessage(),
     ], 500);
 }
 

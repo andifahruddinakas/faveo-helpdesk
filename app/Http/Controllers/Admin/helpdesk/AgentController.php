@@ -115,7 +115,7 @@ class AgentController extends Controller
             return redirect()->back()->with(['fails2' => Lang::get('lang.country-code-required-error'), 'country_code' => 1])->withInput();
         } else {
             $code = CountryCode::select('phonecode')->where('phonecode', '=', $request->get('country_code'))->get();
-            if (!count($code)) {
+            if (! count($code)) {
                 return redirect()->back()->with(['fails2' => Lang::get('lang.incorrect-country-code-error'), 'country_code' => 1])->withInput();
             }
         }
@@ -217,7 +217,7 @@ class AgentController extends Controller
             return redirect()->back()->with(['fails2' => Lang::get('lang.country-code-required-error'), 'country_code' => 1])->withInput();
         } else {
             $code = CountryCode::select('phonecode')->where('phonecode', '=', $request->get('country_code'))->get();
-            if (!count($code)) {
+            if (! count($code)) {
                 return redirect()->back()->with(['fails2' => Lang::get('lang.incorrect-country-code-error'), 'country_code' => 1])->withInput();
             }
         }

@@ -19,7 +19,7 @@
         "nicolaslopezj/searchable": "1.*",
         "chumper/datatable": "dev-develop",
         "chumper/zipper": "1.0.x",
-        "tymon/jwt-auth": "dev-develop",
+        "tymon/jwt-auth": "^1.0",
         "davejamesmiller/laravel-breadcrumbs": "^3.0",
         "davibennun/laravel-push-notification": "dev-laravel5",
         "brozot/laravel-fcm": "^1.0",

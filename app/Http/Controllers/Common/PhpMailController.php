@@ -182,13 +182,13 @@ class PhpMailController extends Controller
     {
         switch ($mail->sending_protocol) {
             case 'smtp':
-                $config = ['host'      => $mail->sending_host,
-                    'port'             => $mail->sending_port,
-                    'security'         => $mail->sending_encryption,
-                    'username'         => $mail->email_address,
-                    'password'         => $mail->password,
+                $config = ['host' => $mail->sending_host,
+                    'port' => $mail->sending_port,
+                    'security' => $mail->sending_encryption,
+                    'username' => $mail->email_address,
+                    'password' => $mail->password,
                 ];
-                if (!$this->commonMailer->setSmtpDriver($config)) {
+                if (! $this->commonMailer->setSmtpDriver($config)) {
                     \Log::info('Invaid configuration :- '.$config);
 
                     return 'invalid mail configuration';
@@ -196,8 +196,8 @@ class PhpMailController extends Controller
                 break;
             case 'send_mail':
                 $config = [
-                    'host'     => \Config::get('mail.host'),
-                    'port'     => \Config::get('mail.port'),
+                    'host' => \Config::get('mail.host'),
+                    'port' => \Config::get('mail.port'),
                     'security' => \Config::get('mail.encryption'),
                     'username' => \Config::get('mail.username'),
                     'password' => \Config::get('mail.password'),
@@ -279,8 +279,8 @@ class PhpMailController extends Controller
         $short = 'database';
         $field = [
             'driver' => 'database',
-            'table'  => 'jobs',
-            'queue'  => 'default',
+            'table' => 'jobs',
+            'queue' => 'default',
             'expire' => 60,
         ];
         $queue = new \App\Model\MailJob\QueueService();

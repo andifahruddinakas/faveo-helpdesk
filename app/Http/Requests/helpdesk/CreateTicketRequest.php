@@ -44,13 +44,13 @@ class CreateTicketRequest extends Request
         }
 
         return [
-            'email'       => 'required|email|max:60',
-            'first_name'  => 'required|min:3|max:40',
-            'helptopic'   => 'required',
+            'email' => 'required|email|max:60',
+            'first_name' => 'required|min:3|max:40',
+            'helptopic' => 'required',
             // 'dept' => 'required',
-            'sla'      => 'required',
-            'subject'  => 'required|min:5',
-            'body'     => 'required|min:10',
+            'sla' => 'required',
+            'subject' => 'required|min:5',
+            'body' => 'required|min:10',
             'priority' => 'required',
         ];
     }
@@ -71,16 +71,16 @@ class CreateTicketRequest extends Request
         // dd($settings->status, $email_mandatory->status);
         if (($settings->status == '1' || $settings->status == 1) && ($email_mandatory->status == '1' || $email_mandatory->status == 1)) {
             return [
-                'email'       => 'required|email|max:60',
-                'first_name'  => 'required|min:3|max:40',
-                'helptopic'   => 'required',
+                'email' => 'required|email|max:60',
+                'first_name' => 'required|min:3|max:40',
+                'helptopic' => 'required',
                 // 'dept' => 'required',
-                'sla'      => 'required',
-                'subject'  => 'required|min:5',
-                'body'     => 'required|min:10',
+                'sla' => 'required',
+                'subject' => 'required|min:5',
+                'body' => 'required|min:10',
                 'priority' => 'required',
-                'code'     => 'required',
-                'mobile'   => 'required',
+                'code' => 'required',
+                'mobile' => 'required',
             ];
         } elseif (($settings->status == '0' || $settings->status == 0) && ($email_mandatory->status == '1' || $email_mandatory->status == 1)) {
             return 0;
@@ -107,16 +107,16 @@ class CreateTicketRequest extends Request
     public function onlyMobleRequired()
     {
         return [
-            'email'       => 'email|max:60',
-            'first_name'  => 'required|min:3|max:40',
-            'helptopic'   => 'required',
+            'email' => 'email|max:60',
+            'first_name' => 'required|min:3|max:40',
+            'helptopic' => 'required',
             // 'dept' => 'required',
-            'sla'      => 'required',
-            'subject'  => 'required|min:5',
-            'body'     => 'required|min:10',
+            'sla' => 'required',
+            'subject' => 'required|min:5',
+            'body' => 'required|min:10',
             'priority' => 'required',
-            'code'     => 'required',
-            'mobile'   => 'required',
+            'code' => 'required',
+            'mobile' => 'required',
         ];
     }
 }

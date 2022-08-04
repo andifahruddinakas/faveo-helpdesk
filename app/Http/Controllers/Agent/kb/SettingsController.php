@@ -81,8 +81,8 @@ class SettingsController extends Controller
                 $settings->logo = $fileName;
                 //$thDestinationPath = 'dist/th';
                 Image::make($destinationPath.'/'.$fileName, [
-                    'width'     => 300,
-                    'height'    => 300,
+                    'width' => 300,
+                    'height' => 300,
                     'grayscale' => false,
                 ])->save('lb-faveo/dist/image/'.$fileName);
             }
@@ -95,8 +95,8 @@ class SettingsController extends Controller
                 $settings->background = $fileName;
                 //$thDestinationPath = 'dist/th';
                 Image::make($destinationPath.'/'.$fileName, [
-                    'width'     => 300,
-                    'height'    => 300,
+                    'width' => 300,
+                    'height' => 300,
                     'grayscale' => false,
                 ])->save('lb-faveo/dist/image/'.$fileName);
             }

@@ -206,7 +206,7 @@ class EmailsController extends Controller
             $email->auto_response = 0;
         }
         $email->fetching_encryption = $request->input('fetching_encryption');
-        if (!$request->input('imap_validate')) {
+        if (! $request->input('imap_validate')) {
             $email->mailbox_protocol = 'novalidate-cert';
         }
         $email->department = $this->departmentValue($request->input('department'));
@@ -289,13 +289,13 @@ class EmailsController extends Controller
     public function setMailConfig($driver, $address, $name, $username, $password, $enc, $host, $port)
     {
         $configs = [
-            'username'   => $username,
-            'from'       => ['address' => $address, 'name' => $name],
-            'password'   => $password,
+            'username' => $username,
+            'from' => ['address' => $address, 'name' => $name],
+            'password' => $password,
             'encryption' => $enc,
-            'host'       => $host,
-            'port'       => $port,
-            'driver'     => $driver,
+            'host' => $host,
+            'port' => $port,
+            'driver' => $driver,
         ];
         foreach ($configs as $key => $config) {
             if (is_array($config)) {
@@ -469,7 +469,7 @@ class EmailsController extends Controller
         if ($encryption != '') {
             $server->setFlag($encryption);
         }
-        if (!$validate) {
+        if (! $validate) {
             $server->setFlag('novalidate-cert');
         } else {
             $server->setFlag('validate-cert');
@@ -520,12 +520,12 @@ class EmailsController extends Controller
             $mail->Password = $request->input('password');            // SMTP password
             $mail->SMTPSecure = $request->input('sending_encryption'); // Enable TLS encryption, `ssl` also accepted
             $mail->Port = $request->input('sending_port');            // TCP port to connect to
-            if (!$request->input('smtp_validate')) {
+            if (! $request->input('smtp_validate')) {
                 $mail->SMTPAuth = true;                               // Enable SMTP authentication
                 $mail->SMTPOptions = [
                     'ssl' => [
-                        'verify_peer'       => false,
-                        'verify_peer_name'  => false,
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
                         'allow_self_signed' => true,
                     ],
                 ];
@@ -636,9 +636,9 @@ class EmailsController extends Controller
             }
             foreach ($request as $key => $value) {
                 $mail_service->create([
-                    'drive'    => $driver,
-                    'key'      => $key,
-                    'value'    => $value,
+                    'drive' => $driver,
+                    'key' => $key,
+                    'value' => $value,
                     'email_id' => $emailid,
                 ]);
             }

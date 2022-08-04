@@ -164,7 +164,7 @@ class TemplateController extends Controller
         //   }
         // Move all images files
 
-        if (!file_exists($filename)) {
+        if (! file_exists($filename)) {
             mkdir($filename, 0777);
         }
         $files = array_filter(scandir($directory.'default'));
@@ -173,7 +173,7 @@ class TemplateController extends Controller
             if ($file === '.' or $file === '..') {
                 continue;
             }
-            if (!is_dir($file)) {
+            if (! is_dir($file)) {
                 //   $file_to_go = str_replace("code/resources/views/emails/",'code/resources/views/emails/'.$fname,$file);
                 $destination = $directory.$fname.'/';
 
@@ -323,18 +323,18 @@ class TemplateController extends Controller
             $msg = $request->input('message');
             $from = $request->input('from');
             $from_address = Emails::where('id', '=', $from)->first();
-            if (!$from_address) {
+            if (! $from_address) {
                 throw new Exception('Sorry! We can not find your request');
             }
             $to_address = [
 
-                'name'  => '',
+                'name' => '',
                 'email' => $to,
             ];
             $message = [
-                'subject'  => $subject,
+                'subject' => $subject,
                 'scenario' => null,
-                'body'     => $msg,
+                'body' => $msg,
             ];
 
             $this->PhpMailController->sendmail($from, $to_address, $message, [], []);

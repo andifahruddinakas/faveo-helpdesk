@@ -86,13 +86,13 @@ class NotificationController extends Controller
             $contents = $view->render();
             $from = $this->PhpMailController->mailfrom('1', '0');
             $to = [
-                'name'  => $user_name,
+                'name' => $user_name,
                 'email' => $email,
             ];
             $message = [
-                'subject'  => 'Daily Report',
+                'subject' => 'Daily Report',
                 'scenario' => null,
-                'body'     => $contents,
+                'body' => $contents,
             ];
 
             return $this->PhpMailController->sendEmail($from, $to, $message);
@@ -120,13 +120,13 @@ class NotificationController extends Controller
                     $contents = $view->render();
                     $from = $this->PhpMailController->mailfrom('1', '0');
                     $to = [
-                        'name'  => $user_name,
+                        'name' => $user_name,
                         'email' => $email,
                     ];
                     $message = [
-                        'subject'  => 'Daily Report',
+                        'subject' => 'Daily Report',
                         'scenario' => null,
-                        'body'     => $contents,
+                        'body' => $contents,
                     ];
 
                     return $this->PhpMailController->sendEmail($from, $to, $message);
@@ -156,13 +156,13 @@ class NotificationController extends Controller
                     $contents = $view->render();
                     $from = $this->PhpMailController->mailfrom('1', '0');
                     $to = [
-                        'name'  => $user_name,
+                        'name' => $user_name,
                         'email' => $email,
                     ];
                     $message = [
-                        'subject'  => 'Daily Report',
+                        'subject' => 'Daily Report',
                         'scenario' => null,
-                        'body'     => $contents,
+                        'body' => $contents,
                     ];
 
                     return $this->PhpMailController->sendEmail($from, $to, $message);
@@ -188,13 +188,13 @@ class NotificationController extends Controller
             $contents = $view->render();
             $from = $this->PhpMailController->mailfrom('1', '0');
             $to = [
-                'name'  => $user_name,
+                'name' => $user_name,
                 'email' => $email,
             ];
             $message = [
-                'subject'  => 'Daily Report',
+                'subject' => 'Daily Report',
                 'scenario' => null,
-                'body'     => $contents,
+                'body' => $contents,
             ];
 
             return $this->PhpMailController->sendEmail($from, $to, $message);
